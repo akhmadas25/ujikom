@@ -1,0 +1,25 @@
+{{>header}}
+{{>navbar}}
+
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          {{#each provinsi}}
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">{{this.nama}}</h4>
+              </div>
+              <div class="card-body">
+                <img src="{{this.photo}}" alt="">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>{{this.tanggal}}</li>
+                </ul>
+                <a class="w-20 me-2 btn btn-lg btn-warning" href="/edit/{{this.id}}">edit</a><span><a class="w-20 btn btn-lg btn-danger" href="/delete/{{this.id}}">edit</a></span>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+    </div>
+</div>
+
+{{>footer}}
